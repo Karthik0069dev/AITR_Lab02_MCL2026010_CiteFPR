@@ -1,14 +1,14 @@
 # research_decisions.md
 
 Labels: VERIFIED (checked in a source or by execution) · INFERRED (plausible, to test) ·
-UNKNOWN (no evidence). Full Phase I tables live in the Lab 02 submissions; this file keeps the
-decisions that shape the code.
+UNKNOWN (no evidence). Full Phase I tables live in `docs/AITR_Lab02_MCL2026010_Prompts01-02.pdf`;
+this file keeps the decisions that shape the code.
 
 ## Decisions
 
 | # | Date | Decision | Reason | Evidence | Label | Next action |
 |---|---|---|---|---|---|---|
-| D1–D7 | 2026-10-22 | Phase I set-up: stay in the review's area; open models + free registries; hardware; shortlist G-A, G-B, G-C | see Phase I PDF | Phase I | — | done |
+| D1–D7 | 2026-10-22 | Phase I set-up: stay in the review's area; open models + free registries; hardware; shortlist G-A, G-B, G-C | see `docs/AITR_Lab02_MCL2026010_Prompts01-02.pdf` (Prompts 01–04) | Phase I | — | done |
 | D8 | 2026-10-28 | Main study = G-A, controlled comparison | no GPU; access verified; review §5.1 | Prompts 03–04 | INFERRED | done (brief written) |
 | D9 | 2026-10-28 | Claim scale, PPV at prevalence and FP causes, not a new problem | Badalova & Mayr 2026; Neralla et al. 2026 | Prompt 04 §2 | VERIFIED | — |
 | D10 | 2026-10-28 | Drop G-B entirely | Naser 2026 covers it | full text | VERIFIED (my decision) | — |

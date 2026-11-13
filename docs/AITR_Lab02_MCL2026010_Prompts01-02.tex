@@ -1,0 +1,734 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setsansfont[]{DejaVu Sans}
+  \setmonofont[]{DejaVu Sans Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={AI Tools for Research --- Lab 02, Phase I: Prompts 01 and 02},
+  pdfauthor={Satyala Murali Karthik (MCL2026010), Department of Information Technology, IIIT Allahabad},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{AI Tools for Research --- Lab 02, Phase I: Prompts 01 and 02}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{From Literature Review to Implementation}
+\author{Satyala Murali Karthik (MCL2026010), Department of Information
+Technology, IIIT Allahabad}
+\date{22 October 2026}
+
+\begin{document}
+\maketitle
+
+\hypertarget{prompts-used}{%
+\section{Prompts used}\label{prompts-used}}
+
+\textbf{Prompt 01 (filled).} I am a postgraduate student converting my
+completed literature review into an implementation-based research paper.
+My topic is \emph{citation fabrication in large language models and
+agentic search tools (benchmarking failure modes, evidence and
+verification)}. Act as a critical research mentor and technical pair
+programmer. Guide me in stages: evidence-based gap identification,
+literature-to-experiment mapping, feasibility, research questions,
+verified baseline, coding, experimental evaluation, manuscript and
+reproducibility. Mark statements as VERIFIED, INFERRED or UNKNOWN, and
+explicitly request source files or outputs when evidence is missing.
+Never invent papers, datasets, repository links, code execution,
+experiments or metrics. Help me create a portable research\_decisions.md
+log containing decisions, reasons, source/evidence and next actions.
+Start by asking me to attach my existing review and summarize its scope
+without assuming unseen content.
+
+\textbf{Prompt 02 (filled).} Analyze my attached literature review
+\emph{{[}Benchmarking Citation Fabrication Rates Across Large Language
+Models and Agentic Search Tools: A Survey of Failure Modes, Evidence,
+and Verification --- attached PDF{]}}. Identify central methods,
+datasets, measured findings, author-reported limitations and unresolved
+questions. Propose five computationally testable research gaps. For
+each, cite the specific passage or reference in my review; clearly
+distinguish a limitation reported in the original paper from your own
+inference; state the experimental question it suggests and what evidence
+would test it. Flag any claims needing verification against the original
+publications. Rank three gaps by research significance, available
+resources and implementation feasibility. Do not claim novelty without a
+separate literature search.
+
+\emph{Tools used:} Claude (Anthropic), including web search to check
+selected claims against the original papers. The AI first asked for the
+review; the full 23-page PDF was supplied and read before any output was
+produced. I read the outputs and accepted the scope summary and gap
+ranking. Hardware: laptop (AMD Ryzen 7 260, NVIDIA RTX 5050 laptop GPU,
+8 GB VRAM) and Google Colab free tier.
+
+\newpage
+
+\hypertarget{prompt-01-output-workspace-review-scope-and-decision-log}{%
+\section{Prompt 01 output --- workspace, review scope and decision
+log}\label{prompt-01-output-workspace-review-scope-and-decision-log}}
+
+\hypertarget{review-scope-summary-of-the-attached-review-nothing-assumed-beyond-its-text}{%
+\subsubsection{1. Review scope (summary of the attached review ---
+nothing assumed beyond its
+text)}\label{review-scope-summary-of-the-attached-review-nothing-assumed-beyond-its-text}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content in review
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Location
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Topic & Citation fabrication by standalone (parametric) LLMs,
+retrieval-augmented tools, and agentic / deep-research systems &
+Abstract, §1 \\
+RQ1 & Failure modes and how to distinguish them operationally & §1.1,
+§3 \\
+RQ2 & Prevalence in controlled evaluations and in-the-wild audits &
+§4 \\
+RQ3 & Benchmarks, datasets, metrics and their comparability & §5 \\
+RQ4 & Detection / mitigation techniques and what remains open &
+§6--§8 \\
+Method & Structured narrative review (not systematic; no screening
+counts), snowballing + keyword search, Jan 2020 -- Sep 2026, inclusion
+IC1--IC4 / exclusion EC1--EC3, per-reference verification stage & §1.4,
+Fig. 1 \\
+Taxonomy & 5 classes at 3 levels: existence (TF, PH), fidelity (PAC,
+IH), support (SM); labelling function Eq. (9), decision procedure Fig. 3
+& §3 \\
+Formalism & Existence/fidelity/support predicates Eqs. (2)--(6); FR and
+ER\_k Eq. (10); CR/CP Eq. (11); P/R/F1 Eq. (12); PPV at prevalence Eq.
+(13); constrained decoding Eq. (14); tiered-verification cost Eq. (15) &
+§2.1, §5.1, §6 \\
+Evidence tables & Parametric (Tab. 4), RAG/agentic (Tab. 5),
+scholarly-record audits (Tab. 6), benchmarks (Tab. 7), verifier
+performance (Tab. 8), mitigation × class (Tab. 9), gaps → directions
+(Tab. 10) & §4--§7 \\
+Reporting items & R1--R8 minimum reporting set for fabrication studies &
+§5.3 \\
+Out of scope & Citation recommendation for humans, plagiarism detection,
+fabricated data/images & §1.1 \\
+Corpus size & 29 references & Reference list \\
+\end{longtable}
+
+\hypertarget{decision-log}{%
+\subsubsection{2. Decision log}\label{decision-log}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0465}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0930}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2558}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1860}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1628}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1163}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1395}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Date
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Decision
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Reason
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source / evidence
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Label
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Next action
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+D1 & 2026-10-22 & Stay in the research area of the review (citation
+fabrication / verification); narrow later & Assignment ``Continuity''
+rule & Assignment §2 & VERIFIED (assignment text) & Choose among gaps in
+gap\_matrix.md \\
+D2 & 2026-10-22 & Use the review as evidence base, not as text to
+recycle; every gap cites a review section & Assignment §1 / Prompt 02 &
+Review §§3--8 & VERIFIED (assignment text) & Re-check cited originals
+(Section 4) \\
+D3 & 2026-10-22 & Restrict to open-weight models + free scholarly
+registries (Crossref, arXiv, Semantic Scholar, OpenAlex) unless
+otherwise decided & Hardware/budget: own laptop + Colab free; no paid
+API stated & Student statement & VERIFIED (student-provided) & Confirm
+API rate limits and terms (Prompt 04) \\
+D4 & 2026-10-22 & Hardware available: laptop Ryzen 7 260 CPU + NVIDIA
+RTX 5050 (laptop) GPU, 8 GB GDDR7 VRAM; Google Colab free tier &
+Determines model size: quantized ≤ 8B models locally & Student
+statement; VRAM from published spec (Notebookcheck) & VERIFIED (spec);
+local \texttt{nvidia-smi} reading pending & Record driver / CUDA version
+from \texttt{nvidia-smi} at G2 \\
+D5 & 2026-10-22 & Time budget: four weekly gates G1--G4 as suggested by
+the assignment & Assignment §4 pacing & Assignment §4 & INFERRED
+(official deadlines pending) & Confirm deadlines on Classroom \\
+D6 & 2026-10-22 & (Accepted by student) Shortlist three gaps for Prompt
+03: G-A (detector FPR/PPV at realistic prevalence), G-B (prompt/protocol
+sensitivity of fabrication rates in open models), G-C (constrained
+decoding over a verified index) & Ranking in gap\_matrix.md §3 &
+gap\_matrix.md & INFERRED & Prompt 03: map to methods, datasets, code
+access \\
+D7 & 2026-10-22 & No novelty claim yet for any gap & Prompt 02 rule; no
+separate literature search done & --- & UNKNOWN & Novelty search in
+Prompt 04 \\
+\end{longtable}
+
+\hypertarget{ai-assistance-log-this-stage}{%
+\subsubsection{3. AI-assistance log (this
+stage)}\label{ai-assistance-log-this-stage}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Step
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tool
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prompt
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AI proposal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Human decision / verification
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Claude (Anthropic) & Prompt 01, filled with topic & Workspace
+structure, scope summary, this decision-log format & Scope table read
+and checked against my review by me; accepted \\
+2 & Claude (Anthropic) & Prompt 02, with review attached & Five gaps +
+ranking (gap\_matrix.md) & Gaps and ranking read by me; ranking accepted
+(G-A, G-B, G-C) \\
+3 & Claude (Anthropic) with web search & Verify review claims against
+originals & Looked up arXiv/journal pages for V1, V5, V7, V8, V9 and GPU
+spec & 4 claims VERIFIED, 1 partly; V3, V4, V6, V10 still UNKNOWN
+(§4) \\
+\end{longtable}
+
+\hypertarget{verification-queue-claims-from-the-review-that-i-must-re-check-in-the-original-papers}{%
+\subsubsection{4. Verification queue (claims from the review that I must
+re-check in the original
+papers)}\label{verification-queue-claims-from-the-review-that-i-must-re-check-in-the-original-papers}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Claim as stated in review
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Review loc.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Original
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+V1 & NeurIPS 2025: 100 fabricated citations in 53 papers; primary codes
+TF 66\%, PAC 27\%, IH 4\%, PH 2\%, SM 1\%; IH secondary in 29\%; all
+cases compound & §3, Tab. 3, Tab. 6 & Ansari {[}2{]} (preprint) &
+VERIFIED against arXiv:2602.05930 abstract (also: semantic hallucination
+secondary in 63\%) \\
+V2 & PPV example: R = 0.97, FPR = 0.03, π = 1\% → PPV ≈ 0.25 & §5.1 Eq.
+(13) & Illustrative calculation by the review itself (not empirical) &
+Arithmetic check: 0.0097 / (0.0097 + 0.0297) = 0.246 → VERIFIED
+(arithmetic only) \\
+V3 & Real-world detector sets contain positives only, so they measure
+recall not precision & §5.2 & CiteTracer {[}16{]}, CiteAudit {[}24{]} &
+UNKNOWN \\
+V4 & ``Rates change with the wording of the prompt, topic familiarity,
+and prompt specificity'' & §5.3 & Bhattacharyya et al.~{[}6{]} &
+UNKNOWN \\
+V5 & urlhealth cut non-resolving URLs 6--79× to \textless{} 1\%,
+effectiveness depended on tool-use competence & §6.2, Tab. 8 & Rao et
+al.~{[}21{]} (preprint) & VERIFIED against arXiv:2604.03173 abstract
+page (also 53,090 / 168,021 URLs; 3--13\% hallucinated; 5--18\%
+non-resolving) \\
+V6 & ``We are not aware of an evaluation of {[}constrained decoding{]}
+on scholarly citations'' & §6.1 & Review author's own statement; De Cao
+et al.~{[}8{]} for the method & UNKNOWN (needs novelty search) \\
+V7 & CiteCheck: LLM judges 55.6--70.1\% → 73.7--81.6\% with search →
+88.9\% acc / 88.7 macro-F1 retrieval-grounded & §6.5, Tab. 8 & Khajavi
+et al.~{[}14{]} (preprint) & PARTLY VERIFIED: 982-citation physics
+benchmark and 88.9\% / 88.7 macro-F1 confirmed (arXiv:2605.27700
+abstract); baseline judge ranges not on abstract page --- check full
+paper; code/data release not stated \\
+V8 & CiteTracer benchmark: 2,450 synthetic + 957 real fabricated; 97.1\%
+accuracy & Tab. 7, Tab. 8 & Li et al.~{[}16{]} (preprint) & VERIFIED
+against arXiv:2605.08583 abstract (also class F1 97.0/95.8/98.5; 97.1\%
+of real fabrications flagged). Paper states code + benchmark released at
+github.com/aaFrostnova/CiteTracer --- repo not yet opened/run
+(UNKNOWN) \\
+V9 & Walters \& Wilder: 55\% (GPT-3.5) vs 18\% (GPT-4) fabricated &
+§4.1, Tab. 4 & {[}26{]} & VERIFIED against Sci. Rep.~full text
+(PMC10484980): 42 topics, 84 texts, 636 refs; 43\% / 24\% substantive
+errors also confirmed \\
+V10 & Kalai et al.: hallucination rate ≥ singleton fraction; evaluation
+rewards guessing & §2.2, §6.1 & {[}13{]} (preprint) & UNKNOWN \\
+\end{longtable}
+
+\hypertarget{next-actions}{%
+\subsubsection{5. Next actions}\label{next-actions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Record driver/CUDA from \texttt{nvidia-smi} in D4.
+\item
+  Check remaining originals: V3 (positives-only real sets --- not stated
+  in CiteTracer abstract), V4, V6, V7 baseline ranges, V10.
+\item
+  Open the CiteTracer repository and check licence and whether the
+  benchmark data are downloadable.
+\item
+  Pick one gap from the shortlist with the instructor's feedback, then
+  run Prompt 03.
+\end{enumerate}
+
+\newpage
+
+\hypertarget{prompt-02-output-evidence-based-gap-matrix}{%
+\section{Prompt 02 output --- evidence-based gap
+matrix}\label{prompt-02-output-evidence-based-gap-matrix}}
+
+\hypertarget{what-the-review-contains-extraction}{%
+\subsubsection{1. What the review contains
+(extraction)}\label{what-the-review-contains-extraction}}
+
+\textbf{Central methods.} Registry lookup with fuzzy field matching
+(Eqs. 2--5; Crossref {[}10{]}); URL liveness + archive checks (urlhealth
+{[}21{]}); consistency / indirect-query checks {[}1{]}; claim-support
+checking by humans (AIS {[}22{]}) or NLI/LLM judges {[}9, 27{]};
+multi-agent verifier cascades (CiteTracer {[}16{]}, CiteAudit {[}24{]},
+CiteCheck {[}14{]}); generation-time grounding (RAG {[}15{]}, ReAct
+agents {[}28{]}, Self-RAG {[}4{]}, OpenScholar {[}3{]}); constrained
+decoding over an index (prefix trie, De Cao et al.~{[}8{]}); calibrated
+abstention {[}13{]}.
+
+\textbf{Datasets / benchmarks named.} ALCE (ASQA, QAMPARI, ELI5)
+{[}9{]}; generative-search audit {[}17{]}; SourceCheckup {[}27{]};
+ScholarQABench {[}3{]}; CiteME {[}20{]}; DRBench + ExpertQA URL audit
+{[}21{]}; CiteTracer 2,450 synthetic + 957 real {[}16{]}; CiteAudit
+{[}24{]}; CiteCheck 982 physics citations {[}14{]}; legal detection
+1,300 excerpts {[}18{]}; NeurIPS 2025 sample of 100 fabrications
+{[}2{]}.
+
+\textbf{Measured findings (as stated in review).} Parametric fabrication
+18--91\% of references {[}7, 26{]}; 2026 URL audit 3--13\% hallucinated,
+5--18\% non-resolving {[}21{]}; 74.5\% citation precision in generative
+search {[}17{]}; legal RAG tools 17--33\% hallucination {[}19{]};
+NeurIPS 2025 primary codes TF 66 / PAC 27 / IH 4 / PH 2 / SM 1\%
+{[}2{]}; verifiers 55.6--97.1\% accuracy on their own benchmarks {[}14,
+16{]}.
+
+\textbf{Author-reported limitations (from review tables).} One prompt
+design, 2023 snapshots {[}26{]}; one model, small sample {[}6{]};
+author-built benchmark {[}3{]}; URL-level only {[}21{]}; real set has
+positives only {[}16{]}; synthetic perturbations {[}24{]}; one field
+{[}14{]}; injected errors {[}18{]}; own benchmark {[}16, 24{]}.
+
+\textbf{Unresolved questions the review itself names (§7, Tab. 10).}
+Non-comparable rates; claim support is hardest; synthetic vs natural
+test data; drift and link rot; registry integrity; cost/latency;
+guessing incentives; recursive contamination; equity of credit;
+dependence on tool-use competence.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{five-computationally-testable-gaps}{%
+\subsubsection{2. Five computationally testable
+gaps}\label{five-computationally-testable-gaps}}
+
+\hypertarget{g-a-detector-precision-at-realistic-prevalence-fpr-on-genuine-reference-lists}{%
+\paragraph{G-A · Detector precision at realistic prevalence (FPR on
+genuine reference
+lists)}\label{g-a-detector-precision-at-realistic-prevalence-fpr-on-genuine-reference-lists}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Evidence in review & §5.1 Eq. (13) and text: ``detectors should report
+FPR on realistic, mostly genuine reference lists and not only recall on
+sets of known fabrications.'' §5.2: real-world sets ``contain positives
+only, so they measure recall and not precision.'' §7 ``Metadata noise'':
+``Thresholds that work in one field fail in another.'' \\
+Original-paper limitation vs inference & \emph{Stated in review (from
+originals):} real set has positives only {[}16{]}; synthetic
+perturbations {[}24{]} (Tab. 7). \emph{Review author's inference:} the
+PPV ≈ 0.25 example (illustrative numbers, not measured). \emph{My
+inference:} a simple deterministic registry matcher may have a
+non-trivial FPR on legitimate but messy references (preprints, books,
+transliterated names). \\
+Experimental question & What false-positive rate does a registry-based
+verifier (Eqs. 2--5) have on genuine reference lists, and what PPV does
+that imply at realistic fabrication prevalence (e.g., 0.5--5\%)? How
+sensitive is this to the thresholds τ, τ\_f? \\
+Evidence that would test it & Genuine reference lists extracted from
+published papers (ground truth = real), plus injected/natural
+fabrications at controlled prevalence; measure P, R, F1, FPR, PPV(π) per
+class; sweep τ. \\
+Compute & CPU + free APIs (Crossref / OpenAlex / arXiv); GPU optional.
+CiteTracer states a public repo (github.com/aaFrostnova/CiteTracer) that
+could serve as a second comparator --- not yet inspected \\
+Status & INFERRED (testable); FPR values of published verifiers:
+UNKNOWN \\
+\end{longtable}
+
+\hypertarget{g-b-prompt-protocol-sensitivity-of-fabrication-rates-in-open-weight-models}{%
+\paragraph{G-B · Prompt / protocol sensitivity of fabrication rates in
+open-weight
+models}\label{g-b-prompt-protocol-sensitivity-of-fabrication-rates-in-open-weight-models}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Evidence in review & §5.3 ``Task and prompt'': rates ``change with the
+wording of the prompt, topic familiarity, and prompt specificity
+{[}6{]}.'' §4.5 ``Progress is neither monotone nor portable.'' §7
+``Non-comparable measurement.'' Fig. 5: rates ``not directly
+comparable.'' Tab. 4 limitation of {[}26{]}: ``One prompt design.'' \\
+Original-paper limitation vs inference & \emph{Stated in review (from
+original):} one prompt design {[}26{]}; prompt variation changed
+fabrication in medical writing {[}6{]}. \emph{Review author's
+inference:} protocol differences explain the spread in Fig. 5 ``at least
+as much as system differences.'' \emph{My inference:} the size of the
+prompt effect relative to the model effect is unmeasured for current
+open-weight models. \\
+Experimental question & Holding the model fixed, how much do FR and
+ER\_k (Eq. 10) change across prompt framings (open ``give 5 references''
+vs ``support this claim''), topic familiarity, and unit of analysis ---
+compared with the change across models? \\
+Evidence that would test it & Factorial run: 3--4 open-weight models ×
+3--4 prompt templates × topics; references labelled with Eq. (9) via
+registry checks; variance decomposition (prompt vs model), with seeds
+and reporting items R1--R8. \\
+Compute & RTX laptop GPU (quantized ≤ 8B models) or Colab T4; free
+registries \\
+Status & INFERRED \\
+\end{longtable}
+
+\hypertarget{g-c-constrained-decoding-over-a-verified-identifier-index}{%
+\paragraph{G-C · Constrained decoding over a verified identifier
+index}\label{g-c-constrained-decoding-over-a-verified-identifier-index}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Evidence in review & §6.1: ``We are not aware of an evaluation of this
+idea on scholarly citations, which makes it a direction rather than a
+result.'' §8.2: research needed on index design, latency, interaction
+with retrieval; ``a constrained model may confidently choose the wrong
+real paper.'' Tab. 9: ``untested on citations.'' \\
+Original-paper limitation vs inference & \emph{Original method:}
+autoregressive entity retrieval with prefix-trie constraints {[}8{]}
+(entities, not citations --- stated in review). \emph{Review author's
+inference:} constraints make TF and unregistered IH unrepresentable but
+not SM. \emph{My inference:} errors may shift from TF/IH to ``wrong real
+paper'' (SM/PAC) --- testable. \\
+Experimental question & Does prefix-trie constrained decoding of
+titles/IDs over a domain index reduce existence-level failures in a
+small open model, and how much of the error mass moves to support-level
+(wrong real paper)? \\
+Evidence that would test it & Same prompts with/without constraint;
+index of e.g.~a subset of arXiv cs.CL metadata; label outputs with Eq.
+(9); report ER\_k shift, coverage, latency. \\
+Compute & RTX laptop GPU / Colab T4 with HF transformers
+(\texttt{prefix\_allowed\_tokens\_fn}); index build on CPU \\
+Status & INFERRED; novelty UNKNOWN (review's ``not aware'' is not a
+search result) \\
+\end{longtable}
+
+\hypertarget{g-d-synthetic-vs-natural-fabrications-for-detector-evaluation}{%
+\paragraph{G-D · Synthetic vs natural fabrications for detector
+evaluation}\label{g-d-synthetic-vs-natural-fabrications-for-detector-evaluation}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Evidence in review & §7 ``Synthetic versus natural errors'': detectors
+``may be tuned to the wrong distribution'' because natural fabrications
+are ``compound and topically plausible {[}2{]}.'' §5.3 ``Ground truth.''
+Tab. 10 row ``Synthetic test data.'' \\
+Original-paper limitation vs inference & \emph{Stated in review (from
+originals):} all 100 NeurIPS cases compound {[}2{]}; benchmarks rely on
+mutation {[}16, 24{]}. \emph{Review author's inference:} error
+distribution of synthetic sets ``may differ'' from natural. \emph{My
+inference:} recall measured on synthetic mutations overestimates recall
+on natural LLM fabrications. \\
+Experimental question & Does a verifier's recall/class accuracy differ
+between synthetic mutations of real references and natural fabrications
+produced by open-weight LLMs on the same topics? \\
+Evidence that would test it & Two test sets matched by topic: (i)
+rule-based mutations per class, (ii) LLM-generated references labelled
+by Eq. (9) + manual check; compare per-class recall of the same
+verifier. \\
+Compute & CPU + small GPU generation; manual labelling effort is the
+bottleneck \\
+Status & INFERRED \\
+\end{longtable}
+
+\hypertarget{g-e-does-verification-loop-self-correction-transfer-to-small-open-models}{%
+\paragraph{G-E · Does verification-loop self-correction transfer to
+small open
+models?}\label{g-e-does-verification-loop-self-correction-transfer-to-small-open-models}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Evidence in review & §7 ``Dependence on tool-use competence'': ``the
+benefit of URL checking in the loop depended on the model's tool-use
+competence {[}21{]}. Mitigation that works for frontier models may not
+transfer to the smaller or older models that many users run.'' Fig. 4
+dashed loop; §6.2 urlhealth. \\
+Original-paper limitation vs inference & \emph{Stated in review (from
+original):} effectiveness depended on tool-use competence {[}21{]}.
+\emph{Review author's inference:} may not transfer to smaller models.
+\emph{My inference:} a registry-check feedback loop yields smaller FR
+reduction for ≤ 8B models. \\
+Experimental question & For small open-weight models, how much does a
+check-and-revise loop (registry/URL feedback) reduce FR and ER\_k
+compared with no loop, and does gain scale with model size? \\
+Evidence that would test it & Same prompts with 0/1/2 correction rounds
+across 2--3 model sizes; Eq. (10) rates; tool-call success rate;
+latency. \\
+Compute & RTX laptop GPU / Colab; free registries \\
+Status & INFERRED \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{gap-matrix-source-evidence-candidate-question-possible-experiment}{%
+\subsubsection{3. Gap matrix (source evidence → candidate question →
+possible
+experiment)}\label{gap-matrix-source-evidence-candidate-question-possible-experiment}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0741}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1111}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Gap
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source evidence (review)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Candidate question
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Possible experiment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Significance
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resources
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Feasibility
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G-A & §5.1 Eq. 13; §5.2; §7 metadata noise; Tab. 7 limits {[}16, 24{]} &
+FPR / PPV of registry verifiers on genuine reference lists; τ
+sensitivity & Genuine bib lists + controlled-prevalence fabrications;
+P/R/FPR/PPV(π); τ sweep & High & CPU, free APIs & High \\
+G-B & §5.3; §4.5; §7; Fig. 5; Tab. 4 {[}6, 26{]} & Prompt vs model share
+of variance in fabrication rates & Factorial models × prompts × topics;
+Eq. 9 labels; variance decomposition & High & GPU ≤ 8B (quantized) &
+High \\
+G-C & §6.1 Eq. 14; §8.2; Tab. 9 {[}8{]} & Does constrained decoding cut
+TF/IH and shift errors to SM? & Constrained vs free decoding over an
+arXiv-subset index & High (if untested) & GPU, index build & Medium
+(engineering risk) \\
+G-D & §7; §5.3; Tab. 10 {[}2, 16, 24{]} & Synthetic vs natural recall
+gap for detectors & Matched synthetic and natural test sets; same
+verifier & Medium--High & CPU + small GPU; manual labels & Medium \\
+G-E & §7; §6.2; Fig. 4 {[}21{]} & Does check-and-revise help small
+models? & 0/1/2 correction rounds × model sizes & Medium & GPU ≤ 8B &
+Medium--High \\
+\end{longtable}
+
+\hypertarget{top-3-ranking-significance-resources-feasibility}{%
+\subsubsection{4. Top-3 ranking (significance × resources ×
+feasibility)}\label{top-3-ranking-significance-resources-feasibility}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{G-A --- Detector FPR/PPV at realistic prevalence.} Directly
+  operationalises the review's own reporting recommendation; needs no
+  GPU; clean baseline (deterministic registry matcher, Eqs. 2--5);
+  natural ablation (τ sweep, per-class) and failure analysis (which
+  genuine references get flagged). Risk: registry rate limits and
+  building a genuine-reference set --- UNKNOWN until checked.
+\item
+  \textbf{G-B --- Prompt/protocol sensitivity in open-weight models.}
+  Answers the review's central comparability problem (RQ3); fits the RTX
+  GPU / Colab with quantized 7--8B models; reuses G-A's verifier as the
+  labelling tool. Risk: labelling quality depends on the verifier ---
+  must validate it first (baseline gate G2).
+\item
+  \textbf{G-C --- Constrained decoding over a verified index.}
+  Potentially the most original (review states it is untested), but
+  highest engineering risk and novelty is UNKNOWN. Fallback if it fails:
+  G-E (self-correction loop), which reuses the same pipeline.
+\end{enumerate}
+
+\textbf{Suggested combination for Prompt 03:} build the G-A verifier as
+the validated baseline, then use it as the measurement instrument for
+G-B (or G-C).
+
+\hypertarget{claims-needing-verification-against-original-publications}{%
+\subsubsection{5. Claims needing verification against original
+publications}\label{claims-needing-verification-against-original-publications}}
+
+See research\_decisions.md §4 (V1--V10). Already checked against
+original abstracts/full text: Ansari {[}2{]} class shares (V1), Rao et
+al.~{[}21{]} tool-use dependence (V5), CiteTracer {[}16{]} benchmark
+figures (V8), Walters \& Wilder {[}26{]} (V9); CiteCheck {[}14{]} partly
+(V7). Still to check: positives-only real sets in {[}16{]}/{[}24{]} (V3
+--- not stated in the CiteTracer abstract), prompt-sensitivity finding
+of {[}6{]} (V4), the review's ``not aware'' claim for constrained
+decoding (V6), and code/data access for CiteAudit and CiteCheck.
+
+\end{document}

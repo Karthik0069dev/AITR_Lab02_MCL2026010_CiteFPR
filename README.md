@@ -123,7 +123,7 @@ research_decisions.md      decisions D1-D33, verification queue
 baseline_validation.md     G2 validation report
 ai_assistance_log.md       prompts, AI proposals, human decisions, debugging log (18 entries)
 docs/                      Prompts 03-11 report, Prompt 12 plan, Prompt 16 review,
-                           Prompt 18 audit, viva notes, architecture diagram
+                           Prompt 18 audit, viva notes, demo script, architecture diagram
 ```
 
 ## Limitations

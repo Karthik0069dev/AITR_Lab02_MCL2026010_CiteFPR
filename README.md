@@ -2,6 +2,8 @@
 
 Satyala Murali Karthik (MCL2026010), IIIT Allahabad · AI Tools for Research, Lab 02
 
+Repository: <https://github.com/Karthik0069dev/AITR_Lab02_MCL2026010_CiteFPR>
+
 **Research question.** On genuine reference lists from pre-ChatGPT arXiv cs.CL papers, what
 false-positive rate (FPR) do registry-based citation verifiers have, what positive predictive
 value (PPV) does that imply when 0.5–5% of citations are fabricated (review Eq. 13), and which

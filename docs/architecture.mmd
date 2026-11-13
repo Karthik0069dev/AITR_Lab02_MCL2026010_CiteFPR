@@ -1,0 +1,27 @@
+flowchart LR
+  subgraph Inputs
+    G[arXiv cs.CL 2020-2022<br/>.bib + .tex sources] -->|build_genuine_set.py| GR[genuine_refs.jsonl<br/>label: genuine]
+    C[CiteTracer ICLR 2026 set] -->|load_positives.py| FR[fabricated_refs.jsonl<br/>807 citations]
+  end
+  GR --> RET
+  FR --> RET
+  subgraph Retrieval [one pass, then frozen]
+    RET[run_retrieval.py] --> CR[(Crossref<br/>bibliographic + DOI)]
+    RET --> AX[(arXiv<br/>ID + title)]
+    RET --> OA[(OpenAlex<br/>DOI + title)]
+    CR --> CACHE[(cache.sqlite)]
+    AX --> CACHE
+    OA --> CACHE
+    CACHE --> CAND[candidates.jsonl]
+  end
+  CAND --> SC[score.py]
+  SC --> V1E[V1E existence]
+  SC --> V1F[V1F Eqs. 2-5]
+  SC --> V2[V2 Naser]
+  SC --> V3[V3 AtomGPT]
+  SC --> V3a[V3a author veto]
+  V1E & V1F & V2 & V3 & V3a --> EV[evaluate.py]
+  EV --> M[FPR + Wilson CI<br/>recall<br/>PPV at pi Eq. 13]
+  EV --> S[tau sweep<br/>FP by type and field]
+  EV --> ADJ[adjudication sample<br/>labelled by hand]
+  ADJ -->|--adjudication| EV

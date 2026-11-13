@@ -1,0 +1,92 @@
+{
+  "_comment": "Frozen evaluation protocol (Prompt 07). Freeze date 2026-10-28. Changes after this date go in research_decisions.md with a reason, never silently.",
+  "frozen_on": "2026-10-28",
+  "primary_metric": "FPR on genuine references (lower is better), reported with Wilson 95% CI",
+  "secondary_metrics": [
+    "recall on each fabricated set (higher is better)",
+    "PPV at prevalence pi via review Eq. 13 (higher is better)",
+    "bootstrap PPV at pi (check of Eq. 13)",
+    "paper-level cluster bootstrap CI of FPR (references of one paper resampled together)"
+  ],
+  "paired_test": "exact McNemar on genuine references; a difference counts if p < 0.05 AND |FPR gap| >= 0.02",
+  "positive_class": "fabricated citation; a flag is a positive prediction",
+  "genuine_set": {
+    "source": "arXiv cs.CL papers submitted 2020-01-01 to 2022-11-29 (before ChatGPT release 2022-11-30)",
+    "start_date": "202001010000",
+    "end_date": "202211292359",
+    "n_candidate_pages": 4,
+    "page_size": 200,
+    "n_papers": 100,
+    "only_cited_bib_entries": true,
+    "sampling_seed": 20261028
+  },
+  "positive_sets": {
+    "iclr2026": "CiteTracer data/iclr2026_hallucinated/hallucinated_refs_structured.json (957 citations) - licence check pending",
+    "neurips2025": "GPTZero NeurIPS 2025 list of 100 (Ansari [2]) - availability pending; optional"
+  },
+  "registries": {
+    "crossref": {
+      "rows": 5,
+      "polite_pool": true
+    },
+    "arxiv": {
+      "min_interval_s": 3.1
+    },
+    "openalex": {
+      "max_searches": 900,
+      "use_for": "DOI lookups always; title search only when no candidate has title sim >= 0.8"
+    }
+  },
+  "verifiers": {
+    "V1E": "review Eq. 2 existence only, tau = 0.85 on 0.7*title_lev + 0.3*author_overlap",
+    "V1F": "review Eqs. 2-5 + Eq. 9; tau_title 0.90, authors all cited surnames present, year exact, venue sim >= 0.5, locators exact",
+    "V2": "Naser 2026: 100*(0.6 Jaccard + 0.2 authors + 0.2 year); flag if < 80 (secondary < 65)",
+    "V3": "Neralla et al. 2026: 0.60 title + 0.25 authors + 0.15 journal; flag if < 80 (secondary < 60)",
+    "V3a": "ablation of V3: author veto (sa < 50 -> not verified), no title substitution for missing authors"
+  },
+  "pi_grid": [
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "tau_sweep": {
+    "min": 50,
+    "max": 95,
+    "step": 1
+  },
+  "bootstrap": {
+    "n_mix": 2000,
+    "mix_size": 1000,
+    "seed": 20261028
+  },
+  "adjudication": {
+    "sample_per_verifier": 100,
+    "max_total": 300,
+    "seed": 20261028,
+    "labels": [
+      "genuine",
+      "genuine_erroneous",
+      "unresolvable"
+    ],
+    "sample_per_verifier_amended": 30
+  },
+  "deep_analysis": [
+    "tau sweep (sensitivity)",
+    "false positives by bib entry type and failed field",
+    "ablation V3 vs V3a"
+  ],
+  "amendments": [
+    {
+      "date": "2026-11-13",
+      "logged_before_results": true,
+      "reason": "time constraint before submission; see research_decisions.md D23-D27",
+      "changes": {
+        "genuine_set.n_papers": "100 -> 30 (run with --n-papers 30)",
+        "retrieval.fallback": "unchanged (arXiv title search); arXiv ID lookups batched (up to 100 IDs per request)",
+        "registries.openalex.max_searches": "900 -> 0 (D28: measured keyless budget ~100 searches/day; DOI lookups kept)",
+        "adjudication.sample_per_verifier": "100 -> 30"
+      }
+    }
+  ]
+}

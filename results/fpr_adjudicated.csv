@@ -1,0 +1,6 @@
+verifier,fp_raw,fp_adjudicated,fp_true_genuine,n_correct_refs,fpr_adjusted,ci_lo,ci_hi,share_of_flags_on_correct_refs
+V1E,96,96,82,553,0.1483,0.1211,0.1803,0.8542
+V1F,267,123,109,553,,,,0.8862
+V2,91,91,77,553,0.1392,0.1129,0.1706,0.8462
+V3,98,98,84,553,0.1519,0.1244,0.1842,0.8571
+V3a,98,98,84,553,0.1519,0.1244,0.1842,0.8571

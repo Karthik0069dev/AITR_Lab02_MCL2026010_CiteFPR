@@ -1,0 +1,92 @@
+arXiv prefetch: 335 records for 367 cited IDs (4 requests)
+[25/1374] network requests so far 36; 50s elapsed
+[50/1374] network requests so far 73; 95s elapsed
+[75/1374] network requests so far 119; 153s elapsed
+[100/1374] network requests so far 154; 199s elapsed
+[125/1374] network requests so far 180; 243s elapsed
+[150/1374] network requests so far 207; 282s elapsed
+[175/1374] network requests so far 233; 329s elapsed
+[200/1374] network requests so far 259; 403s elapsed
+[225/1374] network requests so far 289; 521s elapsed
+[250/1374] network requests so far 329; 616s elapsed
+Traceback (most recent call last):
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\urllib3\connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\scripts\run_retrieval.py", line 73, in <module>
+    main()
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\scripts\run_retrieval.py", line 56, in main
+    cands = retrieve(ref, cr, ax, oa, arxiv_title=True, arxiv_prefetch=pre)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\src\citefpr\retrieve.py", line 56, in retrieve
+    cands += ax.title(ref.title)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\src\citefpr\registry\clients.py", line 172, in title
+    st, body = self.http.get_json_or_text(self.BASE, {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\src\citefpr\registry\clients.py", line 51, in get_json_or_text
+    r = requests.get(url, params=send, timeout=30,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR\.venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)

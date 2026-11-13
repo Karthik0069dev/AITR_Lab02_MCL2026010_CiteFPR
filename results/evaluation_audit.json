@@ -1,0 +1,12 @@
+{
+  "n_rows": 1374,
+  "n_genuine": 567,
+  "n_fabricated": {
+    "iclr2026": 807,
+    "ALL_FABRICATED": 807
+  },
+  "duplicate_ids": [],
+  "bad_labels": [],
+  "bad_flags": [],
+  "id_prefix_overlap_between_sets": []
+}

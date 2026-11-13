@@ -1,0 +1,16 @@
+flowchart TB
+  subgraph S1 ["Data and retrieval"]
+    direction LR
+    G["arXiv cs.CL 2020–2022<br/>.bib + .tex"] -->|build_genuine_set| GR["genuine refs<br/>(negatives)"]
+    C["CiteTracer<br/>ICLR 2026"] -->|load_positives| FR["807 fabricated<br/>(positives)"]
+    GR --> RET["run_retrieval<br/>Crossref · arXiv · OpenAlex"]
+    FR --> RET
+    RET --> CACHE[("frozen<br/>cache")]
+  end
+  subgraph S2 ["Scoring and evaluation"]
+    direction LR
+    SC["score<br/>V1E · V1F · V2 · V3 · V3a"] --> EV["evaluate<br/>FPR, recall, PPV,<br/>McNemar, τ sweep"]
+    EV --> ADJ["hand adjudication<br/>of flagged genuine refs"]
+    ADJ -.-> EV
+  end
+  CACHE --> SC

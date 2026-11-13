@@ -1,0 +1,42 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "packages": {
+    "requests": "2.34.2",
+    "matplotlib": "3.11.2",
+    "pytest": "9.2.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU, 617.42, 8151 MiB",
+  "network": {
+    "crossref": {
+      "status": 200,
+      "rate_headers": {
+        "x-rate-limit-limit": "3",
+        "x-rate-limit-interval": "1s"
+      }
+    },
+    "arxiv": {
+      "status": 200,
+      "rate_headers": {}
+    },
+    "openalex": {
+      "status": 200,
+      "rate_headers": {
+        "X-RateLimit-Cost-USD": "0",
+        "X-RateLimit-Credits-Used": "0",
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Limit-USD": "0.1",
+        "X-RateLimit-Onetime-Remaining": "0",
+        "X-RateLimit-Prepaid-Remaining-USD": "0",
+        "X-RateLimit-Remaining": "1000",
+        "X-RateLimit-Remaining-USD": "0.1",
+        "X-RateLimit-Reset": "72535"
+      }
+    },
+    "github": {
+      "status": 200,
+      "rate_headers": {}
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{"n_genuine": 567, "n_fabricated": 807}
+V1E  FPR 0.1693 [0.1407, 0.2024]  recall 0.9913
+V1F  FPR 0.4709 [0.4301, 0.512]  recall 0.9988
+V2   FPR 0.1605 [0.1326, 0.193]  recall 0.9566
+V3   FPR 0.1728 [0.1439, 0.2061]  recall 0.9926
+V3a  FPR 0.1728 [0.1439, 0.2061]  recall 0.9926
+wrote metrics, ppv, tau sweep, FP breakdowns, adjudication sample and figures to results/

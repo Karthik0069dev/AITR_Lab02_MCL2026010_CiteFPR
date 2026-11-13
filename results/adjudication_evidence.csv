@@ -1,0 +1,124 @@
+ref_id,evidence_source,ev_title_sim,ev_author_overlap,ev_year,cited_year,ev_title,ev_authors,ev_venue,ev_doi
+2003.04987:RaoSEFAIAS,openalex,1.0,1.0,2018,2018,Deep learning for self-driving cars: chances and challenges,Qing Rao; Jelena Frtunikj,,10.1145/3194085.3194087
+2003.04987:Gal_2016,openalex,0.976,1.0,2015,2016,Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning,Yarin Gal; Zoubin Ghahramani,arXiv (Cornell University),10.48550/arxiv.1506.02142
+2003.11520:arora2017asimple,openalex,1.0,1.0,2017,2017,A Simple but Tough-to-Beat Baseline for Sentence Embeddings,Sanjeev Arora; Yingyu Liang; Tengyu Ma,International Conference on Learning Representations,
+2003.11522:deauseterms,openalex,0.729,,2012,2017,"Drugs of Abuse: 2011 Edition, A DEA Resource Guide",,PsycEXTRA Dataset,10.1037/e624282012-001
+2003.04987:Huggingface2017,openalex,0.5,0.0,2022,2017,A survey of transformers,Tianyang Lin; Yuxin Wang; Xiangyang Liu; Xipeng Qiu,AI Open,10.1016/j.aiopen.2022.10.001
+2001.06626:Suarez2017CharacterLevelLM,s2,1.0,1.0,2017,2017,Character-Level Language Modeling with Recurrent Highway Hypernetworks,Joseph Suarez,,
+2003.11522:deaslangterms,openalex,0.265,0.0,2019,2016,ON MODERN STUDENTS’ SLANG (JARGON),N. F. Venzhynovych,,10.36059/978-966-397-136-0/233-249
+2003.11520:47172,openalex,1.0,1.0,2018,2018,Text Embeddings Contain Bias. Here's Why That Matters.,Ben Packer; Michael Mitchell; Mario Guajardo-Céspedes; Yoni Halpern,,
+2002.11768:glasses,openalex,1.0,1.0,2016,2016,Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition,Mahmood Sharif; Sruti Bhagavatula; Lujo Bauer; Michael K. Reiter,ACM SIGSAC Conference on Computer and Communications Security (CCS),10.1145/2976749.2978392
+2001.06626:DBLP:journals/corr/KingmaW13,openalex,1.0,0.0,2024,2014,Auto-Encoding Variational Bayes,Yan-Kun Chen; Jingxuan Liu; Lingyun Peng; Yiqi Wu,Cambridge Explorations in Arts and Sciences,10.61603/ceas.v2i1.33
+2003.04970:Lawrence:12,openalex,1.0,1.0,2012,2012,AIFdb: Infrastructure for the Argument Web,John Shelton Lawrence; Floris Bex; Chris Reed; Mark Snaith,Frontiers in artificial intelligence and applications,10.3233/978-1-61499-111-3-515
+2003.04987:DBLP:journals/corr/abs-1103-0398,openalex,1.0,1.0,2011,2011,Natural Language Processing (almost) from Scratch,Ronan Collobert; Jason Weston; Léon Bottou; Michael Karlen,arXiv (Cornell University),10.48550/arxiv.1103.0398
+2002.08909:end_to_end_memory,openalex,1.0,1.0,2015,2015,End-To-End Memory Networks,Sainbayar Sukhbaatar; Arthur D. Szlam; Jason Weston; Rob Fergus,arXiv (Cornell University),10.48550/arxiv.1503.08895
+2002.11910:ritter2011named,openalex,1.0,1.0,2011,2011,Named Entity Recognition in Tweets: An Experimental Study,Alan Ritter; Sam Clark; Oren Etzioni,,
+2001.06626:DBLP:conf/acl/PapineniRWZ02,openalex,1.0,1.0,2001,2002,BLEU: a method for automatic evaluation of machine translation,Kishore Papineni; Salim Roukos; Todd Ward; Wei-Jing Zhu,Proceedings of the conference - Association for Computational Linguistics. Meeting,10.3115/1073083.1073135
+2003.04970:Chang:11,openalex,1.0,1.0,2011,2011,LIBSVM: A library for support vector machines,Chih-Chung Chang; Chih‐Jen Lin,ACM Transactions on Intelligent Systems and Technology,10.1145/1961189.1961199
+2002.11893:DSTC2013,openalex,1.0,1.0,2013,2013,The Dialog State Tracking Challenge,J. D. Williams; Antoine Raux; Deepak Ramachandran; Alan W. Black,,
+2003.04987:NIPS2011_4329,openalex,1.0,1.0,2011,2011,Practical Variational Inference for Neural Networks,Alex Graves,,
+2003.11522:drugsurvey,openalex,1.0,0.0,2026,2018,2017 National Survey on Drug Use and Health (NSDUH),United States Department of Health and Human Services. Substance Abuse and Mental Health Services Administration,ICPSR Data Holdings,10.3886/e251624
+2003.11520:bolukbasi2016,openalex,1.0,1.0,2016,2016,Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings,Tolga Bolukbasi; Kai-Wei Chang; James Zou; Venkatesh Saligrama,arXiv (Cornell University),10.48550/arxiv.1607.06520
+2003.04987:radford,s2,1.0,0.5,2018,2018,Improving Language Understanding by Generative Pre-Training,A. Radford; Karthik Narasimhan,,
+2003.04987:Pearce18,openalex,1.0,1.0,2018,2018,Uncertainty in Neural Networks: Bayesian Ensembling.,Tim Pearce; Mohamed Zaki; Alexandra Melike Brintrup; Andy D. Neely,arXiv (Cornell University),
+2003.04987:WellingBayesian11,openalex,1.0,1.0,,2011,Bayesian Learning via Stochastic Gradient Langevin Dynamics,Max Welling; Yee Whye Teh,,
+2003.04987:NIPS2016_6494,openalex,1.0,1.0,2016,2016,Threshold Learning for Optimal Decision Making,Nathan F. Lepora,Bristol Research (University of Bristol),
+2003.04987:SantosICML14,openalex,1.0,1.0,2014,2014,Learning Character-level Representations for Part-of-Speech Tagging,Cícero dos Santos; Bianca Zadrozny,,
+2003.03239:socher2013reasoning,openalex,1.0,1.0,2013,2013,Reasoning With Neural Tensor Networks for Knowledge Base Completion,Richard Socher; Danqi Chen; Christopher D. Manning; Andrew Y. Ng,,
+2003.02301:povey2011kaldi,openalex,0.889,0.1,2024,2011,Kaldi Speech Recognition Toolkit,Daniel Povey,Infoscience (Ecole Polytechnique Fédérale de Lausanne),10.57702/jb3fvbn9
+2002.10829:srivastava2014dropout,openalex,1.0,1.0,2014,2014,Dropout: a simple way to prevent neural networks from overfitting,Nitish Srivastava; Geoffrey E. Hinton; Alex Krizhevsky; Ilya Sutskever,,
+2003.04987:Ghavamzadeh_2016,openalex,1.0,0.0,2012,2016,Bayesian Reinforcement Learning,Nikos A. Vlassis; Mohammad Ghavamzadeh; Shie Mannor; Pascal Poupart,"Adaptation, learning, and optimization",10.1007/978-3-642-27645-3_11
+2003.04970:DBLP:journals/toit/LippiT16,openalex,1.0,1.0,2016,2016,Argumentation Mining: State of the Art and Emerging Trends,Marco Lippi; Paolo Torroni,ACM Transactions on Internet Technology,10.1145/2850417
+2001.09907:koehn-etal-2007-moses,openalex,1.0,1.0,2007,2007,Moses: open source toolkit for statistical machine translation,Philipp Koehn; Richard Zens; Chris Dyer; Ondřej Bojar,,10.3115/1557769.1557821
+2003.03239:devlin2018bert,openalex,1.0,1.0,2018,2018,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,Jacob Devlin; Ming-Wei Chang; Kenton Lee; Kristina Toutanova,arXiv (Cornell University),10.48550/arxiv.1810.04805
+2003.11522:huang2018deep,openalex,1.0,1.0,2018,2018,Deep Self-Taught Learning for Detecting Drug Abuse Risk Behavior in Tweets,Han Hu; NhatHai Phan; James Geller; Huy T. Vo,Lecture notes in computer science,10.1007/978-3-030-04648-4_28
+2003.04987:Vaswani2017AttentionIA,openalex,1.0,1.0,2017,2017,Attention Is All You Need,Ashish Vaswani; Noam Shazeer; Niki Parmar; Jakob Uszkoreit,arXiv (Cornell University),10.48550/arxiv.1706.03762
+2002.05104:fukui2016multimodal,openalex,1.0,1.0,2016,2016,Multimodal Compact Bilinear Pooling for Visual Question Answering and Visual Grounding,Akira Fukui; Dong Huk Park; Daylen Yang; Anna Rohrbach,Conference on Empirical Methods in Natural Language Processing (EMNLP),10.18653/v1/d16-1044
+2003.04987:Park18,openalex,1.0,1.0,2018,2018,Sampling-based Bayesian Inference with gradient uncertainty,Chanwoo Park; Jae Myung Kim; Seok Hyeon Ha; Jungwoo Lee,arXiv (Cornell University),10.48550/arxiv.1812.03285
+2001.06626:DBLP:journals/corr/HaE17,openalex,1.0,1.0,2017,2018,A Neural Representation of Sketch Drawings,David Ha; Douglas Eck,arXiv (Cornell University),10.48550/arxiv.1704.03477
+2003.04970:Cabrio:14,openalex,1.0,1.0,2014,2014,NoDE: A Benchmark of Natural Language Arguments,Elena Cabrio; Serena Villata,Frontiers in artificial intelligence and applications,10.3233/978-1-61499-436-7-449
+2001.09907:hunalign,openalex,1.0,1.0,2007,2005,Parallel corpora for medium density languages,Dániel Varga; Péter Halácsy; András Kornai; Viktor Nagy,"Amsterdam studies in the theory and history of linguistic science. Series 4, Current issues in linguistic theory",10.1075/cilt.292.32var
+2002.05104:cornia2019m,openalex,0.939,1.0,2020,2019,Meshed-Memory Transformer for Image Captioning,Marcella Cornia; Matteo Stefanini; Lorenzo Baraldi; Rita Cucchiara,IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings,10.1109/cvpr42600.2020.01059
+2002.12549:DBLP:conf/iclr/BelinkovB18,openalex,1.0,1.0,2017,2018,Synthetic and Natural Noise Both Break Neural Machine Translation,Yonatan Belinkov; Yonatan Bisk,arXiv (Cornell University),10.48550/arxiv.1711.02173
+2001.06626:peng2019text,openalex,1.0,1.0,2019,2019,Text Generation with Exemplar-based Adaptive Decoding,Hao Peng; Ankur P. Parikh; Manaal Faruqui; Bhuwan Dhingra,Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT),10.18653/v1/n19-1263
+2003.03239:wang2015query,s2,1.0,1.0,2015,2015,Query Understanding through Knowledge-Based Conceptualization,Zhong-Yuan Wang; Kejun Zhao; Hai-Xun Wang; Xiao-Feng Meng,International Joint Conference on Artificial Intelligence,
+2003.00639:DBLP:conf/icml/WeinshallCA18,openalex,1.0,1.0,2018,2018,Curriculum Learning by Transfer Learning: Theory and Experiments with Deep Networks,"Daphna Weinshall; Gad Cohen; Amir, Dan",arXiv (Cornell University),10.48550/arxiv.1802.03796
+2002.08909:knowbert,openalex,1.0,0.857,2019,2019,Knowledge Enhanced Contextual Word Representations,Matthew E. Peters; Mark Neumann; Robert Logan; Roy Schwartz,Conference on Empirical Methods in Natural Language Processing (EMNLP),10.18653/v1/d19-1005
+2002.02562:sak:17,openalex,1.0,1.0,2017,2017,Recurrent Neural Aligner: An Encoder-Decoder Neural Network Model for Sequence to Sequence Mapping,Haşim Sak; Matt Shannon; Kanishka Rao; Françoise Beaufays,Interspeech (USB),10.21437/interspeech.2017-1705
+2003.04987:pmlr-v37-blundell15,openalex,1.0,1.0,2015,2015,Weight Uncertainty in Neural Network,Charles Blundell; Julien Cornebise; Koray Kavukcuoglu; Daan Wierstra,International Conference on Machine Learning,
+2003.04987:DBLP:journals/corr/abs-1901-02731,s2,1.0,1.0,2019,2019,A Comprehensive guide to Bayesian Convolutional Neural Network with Variational Inference,Kumar Shridhar; F. Laumann; M. Liwicki,arXiv.org,10.48550/arXiv.1901.02731
+2002.02562:irie2019language,openalex,1.0,1.0,2019,2019,Language Modeling with Deep Transformers,Kazuki Irie; Albert Zeyer; Ralf Schlüter; Hermann Ney,Interspeech (USB),10.21437/interspeech.2019-2225
+2003.04987:DBLP:journals/corr/abs-1907-11692,openalex,1.0,1.0,2019,2019,RoBERTa: A Robustly Optimized BERT Pretraining Approach,"Liu, Yinhan; Ott, Myle; Goyal, Naman; Du, Jingfei",arXiv (Cornell University),10.48550/arxiv.1907.11692
+2003.04987:Collobert_CNN,openalex,1.0,1.0,2008,2008,A unified architecture for natural language processing: deep neural networks with multitask learning,Ronan Collobert; Jason Weston,International Conference on Machine Learning,10.1145/1390156.1390177
+2002.10829:Avt2007sub,openalex,1.0,1.0,2014,2007,Audiovisual Translation: Subtitling,Jorge Díaz Cintas; Aline Remael,Routledge eBooks,10.4324/9781315759678
+2003.04970:Rahwan:09,openalex,1.0,0.5,2009,2009,The Argument Interchange Format,Iyad Rahwan; Chris Reed,Springer eBooks,10.1007/978-0-387-98197-0_19
+2002.05104:ben2017mutan,openalex,1.0,1.0,2017,2017,MUTAN: Multimodal Tucker Fusion for Visual Question Answering,Hedi Ben-younes; Rémi Cadène; Matthieu Cord; Nicolas Thome,IEEE/CVF International Conference on Computer Vision (ICCV),10.1109/iccv.2017.285
+2003.04987:Mikolov10,openalex,1.0,1.0,2010,2010,Recurrent neural network based language model,Tomáš Mikolov; Martin Karafiát; Lukáš Burget; Jaň Černocký,Interspeech (USB),10.21437/interspeech.2010-343
+2002.05104:vaswani2017attention,openalex,1.0,1.0,2017,2017,Attention Is All You Need,Ashish Vaswani; Noam Shazeer; Niki Parmar; Jakob Uszkoreit,arXiv (Cornell University),10.48550/arxiv.1706.03762
+2002.12549:DBLP:journals/corr/GoodfellowSS14,openalex,1.0,1.0,2014,2015,Explaining and Harnessing Adversarial Examples,Ian Goodfellow; Jonathon Shlens; Christian Szegedy,arXiv (Cornell University),10.48550/arxiv.1412.6572
+2002.02562:vaswani2017attention,openalex,1.0,1.0,2017,2017,Attention Is All You Need,Ashish Vaswani; Noam Shazeer; Niki Parmar; Jakob Uszkoreit,arXiv (Cornell University),10.48550/arxiv.1706.03762
+2002.05104:lu2016hierarchical,openalex,1.0,1.0,2016,2016,Hierarchical Question-Image Co-Attention for Visual Question Answering,Jiasen Lu; Jianwei Yang; Dhruv Batra; Devi Parikh,arXiv (Cornell University),10.48550/arxiv.1606.00061
+2002.07339:Rao2017BiomedicalEE,openalex,1.0,1.0,2017,2017,Biomedical Event Extraction using Abstract Meaning Representation,Sudha Rao; Daniel Marcu; Kevin K. Knight; Hal Daumé,,10.18653/v1/w17-2315
+2002.12549:DBLP:conf/iclr/MiyatoDG17,openalex,1.0,1.0,2016,2017,Adversarial Training Methods for Semi-Supervised Text Classification,Takeru Miyato; Andrew M. Dai; Ian Goodfellow,arXiv (Cornell University),10.48550/arxiv.1605.07725
+2003.03239:song2011concept,openalex,1.0,1.0,2011,2011,Short text conceptualization using a probabilistic knowledgebase,Yangqiu Song; Haixun Wang; Zhongyuan Wang; Hongsong Li,,10.5591/978-1-57735-516-8/ijcai11-388
+2002.12549:koehn-etal-2007-moses,openalex,1.0,1.0,2007,2007,Moses: open source toolkit for statistical machine translation,Philipp Koehn; Richard Zens; Chris Dyer; Ondřej Bojar,,10.3115/1557769.1557821
+2002.10829:papineni2002bleu,openalex,1.0,1.0,2001,2002,BLEU: a method for automatic evaluation of machine translation,Kishore Papineni; Salim Roukos; Todd Ward; Wei-Jing Zhu,Proceedings of the conference - Association for Computational Linguistics. Meeting,10.3115/1073083.1073135
+2003.04970:Han:17,openalex,1.0,1.0,2017,2017,Autoencoder Feature Selector.,Kai Han; Chao Li; Xin Chun Shi,arXiv (Cornell University),
+2002.11910:peng2017Sup4improving,openalex,0.459,0.0,2022,2017,Named Entity Recognition in Social Media Data,Archisha Sharma; Shruti Shreya; Shrishail Ravi Terni,International Journal for Research in Applied Science and Engineering Technology,10.22214/ijraset.2022.46181
+2003.04987:DBLP:journals/corr/abs-1903-12136,openalex,1.0,1.0,2019,2019,Distilling Task-Specific Knowledge from BERT into Simple Neural Networks,"Raphael Tang; Yao Lu; Liu, Linqing; Lili Mou",arXiv (Cornell University),10.48550/arxiv.1903.12136
+2002.07339:Stenetorp2012bratAW,openalex,1.0,1.0,2012,2012,brat: a Web-based Tool for NLP-Assisted Text Annotation,Pontus Stenetorp; Sampo Pyysalo; Goran Topić; Tomoko Ohta,Research Explorer (The University of Manchester),
+2002.08909:gpt2,s2,1.0,1.0,2019,2019,Language Models are Unsupervised Multitask Learners,A. Radford; Jeff Wu; R. Child; D. Luan,,
+2002.11893:MDRG,openalex,1.0,1.0,2018,2018,Towards end-to-end multi-domain dialogue modelling,"Paweł Budzianowski; Iñigo Casanueva; B-H Tseng; Gasic, M",Cambridge University Engineering Department Publications Database,10.17863/cam.31464
+2002.02562:rabiner:93,openalex,1.0,1.0,1993,1993,Fundamentals of speech recognition,Lawrence R. Rabiner; Biing-Hwang Fred Juang,,
+2003.04987:BPE94,openalex,1.0,1.0,1994,1994,A new algorithm for data compression,Philip Gage,C/C++ users journal,10.5555/177910.177914
+2003.02301:carlini2016hidden,openalex,1.0,1.0,2016,2016,Hidden voice commands,Nicholas Carlini; Pratyush Mishra; Tavish Vaidya; Yuankai Zhang,USENIX Security Symposium,
+2003.11520:maas-EtAl:2011:ACL-HLT2011,openalex,1.0,1.0,2011,2011,Learning Word Vectors for Sentiment Analysis,Andrew L. Maas; Raymond E. Daly; Peter T. Pham; Dan Huang,,
+2002.05104:bigham2010vizwiz,openalex,1.0,1.0,2010,2010,VizWiz: nearly real-time answers to visual questions,Jeffrey P. Bigham; Chandrika Jayant; Hanjie Ji; Greg Little,ACM Symposium on User Interface Software and Technology (UIST),10.1145/1866029.1866080
+2002.02562:NIPS2011_4329,openalex,1.0,1.0,2011,2011,Practical Variational Inference for Neural Networks,Alex Graves,,
+2003.04970:Miller:95,openalex,1.0,1.0,1995,1995,WordNet: a lexical database for English,George Armitage Miller,Communications of the ACM,10.1145/219717.219748
+2003.02301:chase,openalex,0.388,0.0,2005,2019,Security considerations for Voice Over IP Systems,D. Richard Kuhn; T J Walsh; Steffen Fries,,10.6028/nist.sp.800-58
+2003.03239:wang2016teke,openalex,1.0,1.0,2016,2016,Text-enhanced representation learning for knowledge graph,Zhigang Wang; Juanzi Li,International Joint Conference on Artificial Intelligence,
+2003.04987:ngram,openalex,1.0,1.0,2012,2012,Syntactic Annotations for the Google Books NGram Corpus,Yuri Lin; Jean‐Baptiste Michel; Erez Lieberman Aiden; Jon Orwant,,
+2002.05104:ilievski2017multimodal,openalex,1.0,1.0,2017,2017,Multimodal Learning and Reasoning for Visual Question Answering,Ilija Ilievski; Jiashi Feng,neural information processing systems,
+2001.06626:vanDerMaaten2008,openalex,1.0,1.0,2008,2008,Visualizing Data using t-SNE,Laurens J. P. van der Maaten; Geoffrey E. Hinton,Research portal (Tilburg University),
+2001.06626:DBLP:conf/sigir/WangHXSN18,openalex,1.0,1.0,2018,2018,Chat More: Deepening and Widening the Chatting Topic via A Deep Model,Wenjie Wang; Minlie Huang; Xin-Shun Xu; Fumin Shen,International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR),10.1145/3209978.3210061
+2003.03239:radford2019gpt2,s2,1.0,1.0,2019,2019,Language Models are Unsupervised Multitask Learners,A. Radford; Jeff Wu; R. Child; D. Luan,,
+2002.07339:Zhang2015CharacterlevelCN,openalex,1.0,1.0,2015,2015,Character-level Convolutional Networks for Text Classification,Xiang Zhang; Junbo Zhao; Yann LeCun,arXiv (Cornell University),10.48550/arxiv.1509.01626
+2003.02301:christophe2016cstr,openalex,0.874,0.0,2016,2016,SUPERSEDED - CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit,Christophe Veaux; Junichi Yamagishi; Kirsten MacDonald,University of Edinburgh,10.7488/ds/1495
+2002.11910:emerson2005second,openalex,0.897,1.0,2003,2005,The first international Chinese word segmentation Bakeoff,Richard Sproat; Thomas Emerson,SIGHAN Workshop on Chinese Language Processing (SIGHAN),10.3115/1119250.1119269
+2003.03239:nickel2011rescal,openalex,1.0,0.667,2011,2011,A Three-Way Model for Collective Learning on Multi-Relational Data,Maximilian Nickel; Volker Tresp C; Hans‐Peter Kriegel,,
+2003.00639:DBLP:conf/nips/KumarPK10,openalex,1.0,1.0,2010,2010,Self-Paced Learning for Latent Variable Models,Manish Kumar; Benjamin Packer; Daphne Koller,,
+2002.05104:kiros2015skip,openalex,1.0,1.0,2015,2015,Skip-Thought Vectors,Ryan Kiros; Yukun Zhu; Ruslan Salakhutdinov; Richard S. Zemel,arXiv (Cornell University),10.48550/arxiv.1506.06726
+2001.06626:DBLP:conf/nips/BertinettoHVTV16,openalex,1.0,1.0,2016,2016,Learning feed-forward one-shot learners,Luca Bertinetto; João F. Henriques; Jack Valmadre; Philip H. S. Torr,arXiv (Cornell University),10.48550/arxiv.1606.05233
+2002.08909:skipthought,openalex,1.0,1.0,2015,2015,Skip-Thought Vectors,Ryan Kiros; Yukun Zhu; Ruslan Salakhutdinov; Richard S. Zemel,arXiv (Cornell University),10.48550/arxiv.1506.06726
+2002.10829:cettoloEtAl:EAMT2012,openalex,0.982,1.0,2012,2012,WIT3: Web Inventory of Transcribed and Translated Talks,Mauro Cettolo; Christian Girardi; Marcello Federico,,
+2002.12549:DBLP:journals/jmlr/VincentLLBM10,openalex,1.0,1.0,2010,2010,Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion,Pascal Vincent; Hugo Larochelle; Isabelle Lajoie; Yoshua Bengio,,10.5555/1756006.1953039
+2003.04970:Jozefowicz:15,openalex,1.0,1.0,2015,2015,An Empirical Exploration of Recurrent Network Architectures,Rafał Józefowicz; Wojciech Zaremba; Ilya Sutskever,,
+2003.04987:Guo_2017,openalex,1.0,0.0,2017,2017,On Calibration of Modern Neural Networks,Chuan Guo; Geoff Pleiss; Yu Sun; Kilian Q. Weinberger,arXiv (Cornell University),10.48550/arxiv.1706.04599
+2003.00639:DBLP:conf/acl/PapineniRWZ02,openalex,1.0,1.0,2001,2002,BLEU: a method for automatic evaluation of machine translation,Kishore Papineni; Salim Roukos; Todd Ward; Wei-Jing Zhu,Proceedings of the conference - Association for Computational Linguistics. Meeting,10.3115/1073083.1073135
+2003.04987:2019bots,openalex,0.394,0.0,2020,2019,An Overview of Chatbot Technology,Eleni Adamopoulou; Lefteris Moussiades,IFIP advances in information and communication technology,10.1007/978-3-030-49186-4_31
+2002.11768:gpt-2,openalex,0.641,0.167,2024,2019,Group Diffusion Transformers are Unsupervised Multitask Learners,Lianghua Huang; Wei Wang; Zhi-Fan Wu; Huanzhang Dou,arXiv (Cornell University),10.48550/arxiv.2410.15027
+2003.04987:Zo,openalex,0.023,0.0,2003,2019,"Tyrosine phosphorylation of occludin attenuates its interactions with ZO-1, ZO-2, and ZO-3",Gautam Kale; Anjaparavanda P. Naren; Parimal Sheth; Radhakrishna Rao,Biochemical and Biophysical Research Communications,10.1016/s0006-291x(03)00167-0
+2003.03239:bordes2013transe,openalex,1.0,1.0,2013,2013,Translating Embeddings for Modeling Multi-relational Data,Antoine Bordes; Nicolas Usunier; Alberto García-Durán; Jason Weston,,
+2003.04970:DBLP:journals/ijcini/PeldszusS13,openalex,1.0,1.0,2013,2013,From Argument Diagrams to Argumentation Mining in Texts: A Survey,Andreas Peldszus; Manfred Stede,International Journal of Cognitive Informatics and Natural Intelligence,10.4018/jcini.2013010101
+2003.04987:deeptextcorrector2017,openalex,0.216,0.0,2024,2017,Application of Deep Learning Mathematical Approaches for Image Correctness,Davanam Ganesh; P. Sudarsanam; T. Sarath K. Himabindu; J.Suresh Babu,International Conference on Intelligent Cyber Physical Systems and Internet of Things (ICoICI),10.1109/icoici62503.2024.10696248
+2003.02301:voice_match,openalex,0.319,0.0,2020,2019,Measuring the Functionality of Amazon Alexa and Google Home Applications,Jiamin Wang,VTechWorks (Virginia Tech),
+2003.04987:dos-santos-gatti-2014-deep,openalex,1.0,0.5,2014,2014,Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts,Cícero dos Santos; Maíra Gatti de Bayser,International Conference on Computational Linguistics,
+2003.11522:twitterdevagree,,0.0,,,2018,,,,
+2002.11893:eric2019multiwoz21,,0.0,,,2019,,,,
+2002.08909:conll_ner,s2,1.0,1.0,2003,2003,Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition,E. F. Tjong-Kim-Sang; F. D. Meulder,Conference on Computational Natural Language Learning,10.48550/arXiv.cs/0306050
+2003.11522:zhang2015character,,0.0,,,2015,,,,
+2002.08909:gpt,,0.0,,,2018,,,,
+2003.03239:wu2012probase,,0.0,,,2012,,,,
+2002.02562:graves:06,,0.0,,,2006,,,,
+2002.08909:mips_alsh,,0.0,,,2014,,,,
+2003.03239:honnibal2017spacy,,0.0,,,2017,,,,
+2001.06626:DBLP:journals/corr/HaDL16,,0.0,,,2017,,,,
+2003.00639:DBLP:conf/ijcnlp/LiSSLCN17,s2,1.0,1.0,2017,2017,DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset,Yan-Ran Li; Hui Su; Xiao-Yu Shen; Wen-Jie Li,International Joint Conference on Natural Language Processing,10.48550/arXiv.1710.03957
+2002.10829:karakanta2019subtitling,s2,1.0,1.0,2019,2019,Are Subtitling Corpora really Subtitle-like?,Alina Karakanta; Matteo Negri; M. Turchi,CLICIT,
+2003.00639:DBLP:conf/iclr/AroraLM17,openalex,1.0,1.0,2017,2017,A Simple but Tough-to-Beat Baseline for Sentence Embeddings,Sanjeev Arora; Yingyu Liang; Tengyu Ma,International Conference on Learning Representations,
+2003.04987:Mitsuku,,0.0,,,2019,,,,
+2003.04970:Reed:08a,,0.0,,,2008,,,,
+2003.04970:Erhan:10,,0.0,,,2010,,,,
+2002.07339:Rahul2017BiomedicalET,,0.0,,,2017,,,,
+2003.02301:vaidya2015cocaine,,0.0,,,2015,,,,

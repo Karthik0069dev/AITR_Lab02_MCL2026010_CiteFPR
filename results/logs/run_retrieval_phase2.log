@@ -1,0 +1,183 @@
+=== pass 1 11:52:42
+arXiv prefetch: 335 records for 367 cited IDs (0 requests)
+[25/1374] network requests so far 0; 0s elapsed
+[50/1374] network requests so far 0; 0s elapsed
+[75/1374] network requests so far 0; 0s elapsed
+[100/1374] network requests so far 0; 0s elapsed
+[125/1374] network requests so far 0; 0s elapsed
+[150/1374] network requests so far 0; 0s elapsed
+[175/1374] network requests so far 0; 0s elapsed
+[200/1374] network requests so far 0; 0s elapsed
+[225/1374] network requests so far 0; 1s elapsed
+[250/1374] network requests so far 0; 1s elapsed
+[275/1374] network requests so far 3; 8s elapsed
+[300/1374] network requests so far 4; 11s elapsed
+[325/1374] network requests so far 9; 27s elapsed
+[350/1374] network requests so far 11; 33s elapsed
+[375/1374] network requests so far 20; 61s elapsed
+[400/1374] network requests so far 24; 73s elapsed
+[425/1374] network requests so far 30; 92s elapsed
+[450/1374] network requests so far 36; 110s elapsed
+[475/1374] network requests so far 44; 135s elapsed
+[500/1374] network requests so far 58; 190s elapsed
+[525/1374] network requests so far 67; 224s elapsed
+[550/1374] network requests so far 74; 244s elapsed
+[575/1374] network requests so far 80; 265s elapsed
+[600/1374] network requests so far 125; 540s elapsed
+[625/1374] network requests so far 146; 631s elapsed
+[650/1374] network requests so far 170; 706s elapsed
+[675/1374] network requests so far 191; 795s elapsed
+[700/1374] network requests so far 214; 915s elapsed
+[725/1374] network requests so far 247; 1123s elapsed
+[750/1374] network requests so far 271; 1226s elapsed
+[775/1374] network requests so far 290; 1321s elapsed
+[800/1374] network requests so far 311; 1401s elapsed
+[825/1374] network requests so far 336; 1518s elapsed
+[850/1374] network requests so far 357; 1590s elapsed
+[875/1374] network requests so far 377; 1726s elapsed
+[900/1374] network requests so far 401; 1798s elapsed
+[925/1374] network requests so far 425; 1874s elapsed
+[950/1374] network requests so far 445; 1976s elapsed
+[975/1374] network requests so far 482; 2204s elapsed
+[1000/1374] network requests so far 503; 2277s elapsed
+[1025/1374] network requests so far 526; 2389s elapsed
+[1050/1374] network requests so far 548; 2464s elapsed
+[1075/1374] network requests so far 572; 2638s elapsed
+[1100/1374] network requests so far 616; 2871s elapsed
+[1125/1374] network requests so far 637; 2954s elapsed
+[1150/1374] network requests so far 660; 3094s elapsed
+[1175/1374] network requests so far 682; 3217s elapsed
+[1200/1374] network requests so far 702; 3301s elapsed
+[1225/1374] network requests so far 723; 3556s elapsed
+[1250/1374] network requests so far 747; 3649s elapsed
+[1275/1374] network requests so far 769; 3735s elapsed
+[1300/1374] network requests so far 790; 3822s elapsed
+[1325/1374] network requests so far 813; 3933s elapsed
+[1350/1374] network requests so far 836; 4039s elapsed
+[1374/1374] network requests so far 857; 4142s elapsed
+wrote data/candidates.jsonl; cache now holds {'arxiv': 821, 'crossref': 1441, 'openalex': 105}
+OpenAlex searches left in budget: 0
+INCOMPLETE: 19 citations had a failed request (listed in data\candidates.incomplete.txt); re-run the same command - cached answers are reused, only failures are retried
+=== pass 1 exit 2 13:01:45
+=== pass 2 13:03:45
+arXiv prefetch: 335 records for 367 cited IDs (0 requests)
+[25/1374] network requests so far 0; 0s elapsed
+[50/1374] network requests so far 0; 0s elapsed
+[75/1374] network requests so far 0; 0s elapsed
+[100/1374] network requests so far 0; 0s elapsed
+[125/1374] network requests so far 0; 0s elapsed
+[150/1374] network requests so far 0; 0s elapsed
+[175/1374] network requests so far 0; 0s elapsed
+[200/1374] network requests so far 0; 0s elapsed
+[225/1374] network requests so far 0; 0s elapsed
+[250/1374] network requests so far 0; 0s elapsed
+[275/1374] network requests so far 0; 0s elapsed
+[300/1374] network requests so far 0; 0s elapsed
+[325/1374] network requests so far 0; 1s elapsed
+[350/1374] network requests so far 0; 1s elapsed
+[375/1374] network requests so far 0; 1s elapsed
+[400/1374] network requests so far 0; 1s elapsed
+[425/1374] network requests so far 0; 1s elapsed
+[450/1374] network requests so far 0; 1s elapsed
+[475/1374] network requests so far 0; 1s elapsed
+[500/1374] network requests so far 0; 1s elapsed
+[525/1374] network requests so far 0; 1s elapsed
+[550/1374] network requests so far 0; 1s elapsed
+[575/1374] network requests so far 0; 1s elapsed
+[600/1374] network requests so far 15; 153s elapsed
+[625/1374] network requests so far 15; 154s elapsed
+[650/1374] network requests so far 15; 154s elapsed
+[675/1374] network requests so far 15; 154s elapsed
+[700/1374] network requests so far 16; 169s elapsed
+[725/1374] network requests so far 18; 205s elapsed
+[750/1374] network requests so far 18; 206s elapsed
+[775/1374] network requests so far 18; 206s elapsed
+[800/1374] network requests so far 18; 206s elapsed
+[825/1374] network requests so far 18; 206s elapsed
+[850/1374] network requests so far 18; 206s elapsed
+[875/1374] network requests so far 18; 207s elapsed
+[900/1374] network requests so far 18; 207s elapsed
+[925/1374] network requests so far 18; 207s elapsed
+[950/1374] network requests so far 18; 207s elapsed
+[975/1374] network requests so far 22; 218s elapsed
+[1000/1374] network requests so far 22; 218s elapsed
+[1025/1374] network requests so far 22; 218s elapsed
+[1050/1374] network requests so far 22; 219s elapsed
+[1075/1374] network requests so far 22; 219s elapsed
+[1100/1374] network requests so far 26; 230s elapsed
+[1125/1374] network requests so far 26; 230s elapsed
+[1150/1374] network requests so far 26; 231s elapsed
+[1175/1374] network requests so far 26; 231s elapsed
+[1200/1374] network requests so far 26; 231s elapsed
+[1225/1374] network requests so far 29; 240s elapsed
+[1250/1374] network requests so far 29; 240s elapsed
+[1275/1374] network requests so far 29; 240s elapsed
+[1300/1374] network requests so far 29; 240s elapsed
+[1325/1374] network requests so far 29; 241s elapsed
+[1350/1374] network requests so far 29; 241s elapsed
+[1374/1374] network requests so far 29; 241s elapsed
+wrote data/candidates.jsonl; cache now holds {'arxiv': 838, 'crossref': 1441, 'openalex': 105}
+OpenAlex searches left in budget: 0
+INCOMPLETE: 2 citations had a failed request (listed in data\candidates.incomplete.txt); re-run the same command - cached answers are reused, only failures are retried
+=== pass 2 exit 2 13:07:48
+=== pass 3 13:09:48
+arXiv prefetch: 335 records for 367 cited IDs (0 requests)
+[25/1374] network requests so far 0; 0s elapsed
+[50/1374] network requests so far 0; 0s elapsed
+[75/1374] network requests so far 0; 0s elapsed
+[100/1374] network requests so far 0; 0s elapsed
+[125/1374] network requests so far 0; 0s elapsed
+[150/1374] network requests so far 0; 0s elapsed
+[175/1374] network requests so far 0; 0s elapsed
+[200/1374] network requests so far 0; 0s elapsed
+[225/1374] network requests so far 0; 0s elapsed
+[250/1374] network requests so far 0; 0s elapsed
+[275/1374] network requests so far 0; 0s elapsed
+[300/1374] network requests so far 0; 0s elapsed
+[325/1374] network requests so far 0; 1s elapsed
+[350/1374] network requests so far 0; 1s elapsed
+[375/1374] network requests so far 0; 1s elapsed
+[400/1374] network requests so far 0; 1s elapsed
+[425/1374] network requests so far 0; 1s elapsed
+[450/1374] network requests so far 0; 1s elapsed
+[475/1374] network requests so far 0; 1s elapsed
+[500/1374] network requests so far 0; 1s elapsed
+[525/1374] network requests so far 0; 1s elapsed
+[550/1374] network requests so far 0; 1s elapsed
+[575/1374] network requests so far 0; 1s elapsed
+[600/1374] network requests so far 2; 7s elapsed
+[625/1374] network requests so far 2; 8s elapsed
+[650/1374] network requests so far 2; 8s elapsed
+[675/1374] network requests so far 2; 8s elapsed
+[700/1374] network requests so far 2; 8s elapsed
+[725/1374] network requests so far 2; 8s elapsed
+[750/1374] network requests so far 2; 9s elapsed
+[775/1374] network requests so far 2; 9s elapsed
+[800/1374] network requests so far 2; 9s elapsed
+[825/1374] network requests so far 2; 9s elapsed
+[850/1374] network requests so far 2; 10s elapsed
+[875/1374] network requests so far 2; 10s elapsed
+[900/1374] network requests so far 2; 10s elapsed
+[925/1374] network requests so far 2; 10s elapsed
+[950/1374] network requests so far 2; 11s elapsed
+[975/1374] network requests so far 2; 11s elapsed
+[1000/1374] network requests so far 2; 11s elapsed
+[1025/1374] network requests so far 2; 11s elapsed
+[1050/1374] network requests so far 2; 11s elapsed
+[1075/1374] network requests so far 2; 12s elapsed
+[1100/1374] network requests so far 2; 12s elapsed
+[1125/1374] network requests so far 2; 12s elapsed
+[1150/1374] network requests so far 2; 13s elapsed
+[1175/1374] network requests so far 2; 13s elapsed
+[1200/1374] network requests so far 2; 13s elapsed
+[1225/1374] network requests so far 2; 14s elapsed
+[1250/1374] network requests so far 2; 14s elapsed
+[1275/1374] network requests so far 2; 14s elapsed
+[1300/1374] network requests so far 2; 15s elapsed
+[1325/1374] network requests so far 2; 15s elapsed
+[1350/1374] network requests so far 2; 15s elapsed
+[1374/1374] network requests so far 2; 16s elapsed
+wrote data/candidates.jsonl; cache now holds {'arxiv': 840, 'crossref': 1441, 'openalex': 105}
+OpenAlex searches left in budget: 0
+COMPLETE: every request got a definitive answer
+=== pass 3 exit 0 13:10:04

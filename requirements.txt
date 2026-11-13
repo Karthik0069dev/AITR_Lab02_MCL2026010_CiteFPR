@@ -1,0 +1,5 @@
+# Versions below are the ones the tests passed with on 28 Oct 2026 (Python 3.13.18).
+# Older versions are likely fine but untested.
+requests>=2.31
+matplotlib>=3.8
+pytest>=8.0

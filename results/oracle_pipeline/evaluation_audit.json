@@ -1,0 +1,14 @@
+{
+  "n_rows": 2179,
+  "n_genuine": 1023,
+  "n_fabricated": {
+    "citetracer_synth_fabricated": 1156,
+    "ALL_FABRICATED": 1156
+  },
+  "duplicate_ids": [],
+  "bad_labels": [],
+  "bad_flags": [],
+  "id_prefix_overlap_between_sets": [
+    "synth"
+  ]
+}

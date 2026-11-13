@@ -1,0 +1,13 @@
+[10/123] openalex searches left 0; s2 failed 0
+[20/123] openalex searches left 0; s2 failed 0
+[30/123] openalex searches left 0; s2 failed 1
+[40/123] openalex searches left 0; s2 failed 1
+[50/123] openalex searches left 0; s2 failed 1
+[60/123] openalex searches left 0; s2 failed 1
+[70/123] openalex searches left 0; s2 failed 2
+[80/123] openalex searches left 0; s2 failed 2
+[90/123] openalex searches left 0; s2 failed 3
+[100/123] openalex searches left 0; s2 failed 5
+[110/123] openalex searches left 0; s2 failed 11
+[120/123] openalex searches left 0; s2 failed 16
+wrote results/adjudication_evidence.csv; rows without evidence: 14

@@ -11,6 +11,17 @@ ready in tabs: `results/metrics.csv`, `docs/viva_prep.md`, and the paper PDF at 
 cd "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR"
 ```
 
+Then activate the environment **once**, so every command below is just `python`:
+
+```bash
+.venv\Scripts\activate
+```
+
+Use **backslashes**. `.venv/Scripts/python` is Git Bash syntax, and the normal Windows prompt
+answers *"'.venv' is not recognized as an internal or external command"*. In PowerShell the line
+is `.\.venv\Scripts\Activate.ps1`. Your prompt should then start with `(.venv)`; confirm with
+`python --version` → `Python 3.12.10`.
+
 ---
 
 ## 0:00–0:45 — The question (no commands)
@@ -31,7 +42,7 @@ Point at the pipeline figure (Fig. 1) while saying this.
 ## 0:45–1:00 — Tests
 
 ```bash
-.venv/Scripts/python -m pytest -q
+python -m pytest -q
 ```
 
 > "33 unit tests — the similarity function, the Wilson interval, the exact McNemar test, and
@@ -42,7 +53,7 @@ Point at the pipeline figure (Fig. 1) while saying this.
 ## 1:00–2:00 — Scoring (start it, then talk for 43 s)
 
 ```bash
-.venv/Scripts/python scripts/score.py --refs data/genuine_refs.jsonl data/fabricated_refs.jsonl --candidates data/frozen/candidates_20261113.jsonl --out results/scores.csv
+python scripts/score.py --refs data/genuine_refs.jsonl data/fabricated_refs.jsonl --candidates data/frozen/candidates_20261113.jsonl --out results/scores.csv
 ```
 
 **Start the command, then keep talking — it takes 43 seconds.** Fill the silence with the control:
@@ -63,7 +74,7 @@ When it finishes, note `0 had no candidate record`.
 ## 2:00–3:00 — Evaluation and the headline
 
 ```bash
-.venv/Scripts/python scripts/evaluate.py --scores results/scores.csv --adjudication results/adjudication_sample.csv --out results
+python scripts/evaluate.py --scores results/scores.csv --adjudication results/adjudication_sample.csv --out results
 ```
 
 It prints the five verifiers. Read the contrast straight off the screen:
@@ -101,7 +112,7 @@ If asked for a concrete case:
 ## 4:00–5:00 — Honesty, then stop
 
 ```bash
-.venv/Scripts/python scripts/check_paper_numbers.py
+python scripts/check_paper_numbers.py
 ```
 
 > "40 checks: every number in the paper is re-derived from the result files, and it fails if the

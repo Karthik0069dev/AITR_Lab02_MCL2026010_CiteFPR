@@ -2,16 +2,36 @@
 
 One screen. Commands to paste, numbers to quote. Full wording: `demo_script.md`.
 
+## Setup (do this before they walk in)
+
+Open a terminal, then run these two lines **once**. After this, every command is just `python`.
+
 ```
 cd "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR"
 ```
 
+```
+.venv\Scripts\activate
+```
+
+Your prompt should now start with `(.venv)`. Check with `python --version` → `Python 3.12.10`.
+
+> **Backslashes, not forward slashes.** `.venv/Scripts/python` is Git Bash syntax; in the normal
+> Windows prompt it gives *"'.venv' is not recognized as an internal or external command"*.
+> Activating once avoids the issue entirely.
+> In PowerShell the activate line is `.\.venv\Scripts\Activate.ps1` instead.
+
+## The demo
+
 | # | Paste this | While it runs, say |
 |---|---|---|
-| 1 | `.venv/Scripts/python -m pytest -q` | 33 tests: similarity, Wilson, McNemar, Eq. 13 |
-| 2 | `.venv/Scripts/python scripts/score.py --refs data/genuine_refs.jsonl data/fabricated_refs.jsonl --candidates data/frozen/candidates_20261113.jsonl --out results/scores.csv` | **43 s — talk here.** 1,374 citations. All five verifiers read one *frozen, SHA-256 hashed* cache, so differences come from the rule, not from a luckier registry day |
-| 3 | `.venv/Scripts/python scripts/evaluate.py --scores results/scores.csv --adjudication results/adjudication_sample.csv --out results` | reads out the five verifiers |
-| 4 | `.venv/Scripts/python scripts/check_paper_numbers.py` | 40 checks: every number in the paper re-derived from the CSVs |
+| 1 | `python -m pytest -q` | 33 tests: similarity, Wilson, McNemar, Eq. 13 |
+| 2 | `python scripts/score.py --refs data/genuine_refs.jsonl data/fabricated_refs.jsonl --candidates data/frozen/candidates_20261113.jsonl --out results/scores.csv` | **43 s — talk here.** 1,374 citations. All five verifiers read one *frozen, SHA-256 hashed* cache, so differences come from the rule, not from a luckier registry day |
+| 3 | `python scripts/evaluate.py --scores results/scores.csv --adjudication results/adjudication_sample.csv --out results` | reads out the five verifiers |
+| 4 | `python scripts/check_paper_numbers.py` | 40 checks: every number in the paper re-derived from the CSVs |
+| 5 | `git status --short results/` | **prints nothing** — the run just reproduced the committed results byte-for-byte |
+
+(Inside the scripts, forward slashes in the arguments are fine — Python handles them.)
 
 ## Numbers to quote
 
@@ -41,7 +61,9 @@ cd "C:\Users\karth\Downloads\cladue\AITR_Lab02_MCL2026010_CiteFPR"
 
 | | |
 |---|---|
-| "Are these numbers real?" | That run just rewrote `scores.csv` — `git status` shows no change. Byte-identical. |
+| "Are these numbers real?" | Command 5 — `git status` shows no change after the rerun. Byte-identical. |
 | "Did you tune thresholds?" | No. Fixed from the source papers, frozen 28 Oct. τ sweep is sensitivity only. |
 | "Only 19 papers?" | 30 sampled, 11 had no `.bib`. Paper-cluster CI reported: V1E 12.2–21.7%. |
+| `'.venv' is not recognized` | Wrong slashes — use `.venv\Scripts\activate`, then plain `python`. |
+| `'python' is not recognized` | The venv isn't active; rerun the activate line. Prompt must show `(.venv)`. |
 | Command fails | `results/metrics.csv` is committed — same data. Repo open in a browser as backup. |
